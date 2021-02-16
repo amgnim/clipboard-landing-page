@@ -1,0 +1,38 @@
+// Button styles
+.o-btn {
+  color: white;
+  display: inline-block;
+  padding: rem(15px) rem(74px);
+  border-radius: rem(50px);
+  transition: all 150ms ease-in;
+
+  &:not(:last-child) {
+    margin-bottom: rem(25px);
+  }
+
+  @include breakpoint-up(medium) {
+    padding: rem(15px) rem(44px);
+
+    &:not(:last-child) {
+      margin-right: rem(20px);
+      margin-bottom: 0;
+    }
+  }
+
+  &--green {
+    background-color: $strong-cyan;
+    box-shadow: inset 0px -3px 0px rgba(76, 84, 93, 0.5),
+      0px 10px 20px rgba(38, 186, 164, 0.2);
+  }
+
+  &--blue {
+    background-color: $light-blue;
+    box-shadow: inset 0px -3px 0px rgba(76, 84, 93, 0.5),
+      0px 10px 20px rgba(97, 115, 255, 0.2);
+  }
+
+  &:hover {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,29 @@
+body {
+  font-family: $font-stack;
+  font-size: $base-font-size;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+}
+
+p {
+  color: $grayish-blue;
+}
+
+.container {
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+
+  &--padding-x {
+    padding: 0 rem(30px);
+
+    @include breakpoint-up(large) {
+      padding: 0 rem(100px);
+    }
+
+    @include breakpoint-up(xlarge) {
+      padding: 0 rem(220px);
+    }
+  }
+}

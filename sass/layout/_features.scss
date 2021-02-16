@@ -1,0 +1,154 @@
+// Feature section component styles
+.c-section {
+  @include flex(column);
+  margin-bottom: rem(166px);
+
+  @include breakpoint-up(large) {
+    margin-bottom: rem(150px);
+  }
+
+  &__intro {
+    margin-bottom: rem(70px);
+
+    @include breakpoint-up(xlarge) {
+      margin-bottom: rem(112px);
+    }
+  }
+
+  &__description {
+    @include breakpoint-up(medium) {
+      max-width: rem(720px);
+    }
+
+    @include breakpoint-up(xlarge) {
+      font-size: rem(24px);
+    }
+  }
+}
+
+// Feature-1 (Keep track of your snippets)
+.feature-1 {
+  padding: 0 rem(30px);
+
+  @include breakpoint-up(large) {
+    width: 100%;
+    display: flex;
+    place-items: center;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+
+      @include breakpoint-up(large) {
+        position: relative;
+        left: -10%;
+      }
+    }
+  }
+
+  &__text {
+    @include breakpoint-down(medium) {
+      padding-top: rem(60px);
+    }
+
+    @include breakpoint-up(large) {
+      max-width: rem(440px);
+      text-align: left;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(60px);
+    }
+
+    @include breakpoint-up(xlarge) {
+      &:not(:last-child) {
+        margin-bottom: rem(90px);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(20px);
+
+    @include breakpoint-up(xlarge) {
+      margin-bottom: rem(30px);
+    }
+  }
+}
+
+//Feature-2(Access clipboard anywhere
+.feature-2 {
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Feature-3(Supercharge your workflow)
+.feature-3 {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include breakpoint-up(medium) {
+      gap: rem(50px);
+    }
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    align-content: baseline;
+
+    @include breakpoint-down(small) {
+      padding-bottom: rem(60px);
+    }
+  }
+
+  &__icon {
+    padding-bottom: rem(48px);
+
+    @include breakpoint-up(xlarge) {
+      padding-bottom: rem(64px);
+    }
+  }
+
+  &__title {
+    padding-bottom: rem(30px);
+
+    @include breakpoint-up(xlarge) {
+      padding-bottom: rem(36px);
+    }
+  }
+}
+
+// Feature-4 (Brands)
+.feature-4 {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(50px);
+    }
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(5, 1fr);
+      gap: rem(100px);
+    }
+  }
+
+  &__item {
+    padding-bottom: rem(65px);
+
+    img {
+      height: rem(45px);
+    }
+  }
+}

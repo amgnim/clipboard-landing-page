@@ -1,0 +1,56 @@
+.hero {
+  text-align: center;
+  padding-top: rem(124px);
+  padding-bottom: rem(166px);
+  background-image: url('../images/bg-header-mobile.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @include breakpoint-up(medium) {
+    background-image: url('../images/bg-header-desktop.png');
+  }
+  @include breakpoint-up(large) {
+    background-image: url('../images/bg-header-desktop.png');
+    padding-bottom: rem(180px);
+  }
+
+  @include breakpoint-up(xlarge) {
+    padding-top: rem(174px);
+    padding-bottom: rem(215px);
+  }
+
+  .container {
+    @include flex(column);
+  }
+
+  &__logo {
+    max-width: 7rem;
+    margin-bottom: rem(72px);
+
+    @include breakpoint-up(xlarge) {
+      max-width: 10.5rem;
+      margin-bottom: rem(92px);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(24px);
+
+    @include breakpoint-up(xlarge) {
+      margin-bottom: rem(35px);
+    }
+  }
+
+  &__description {
+    margin-bottom: rem(50px);
+
+    @include breakpoint-up(medium) {
+      max-width: 37rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+      font-size: rem(24px);
+      margin-bottom: rem(70px);
+    }
+  }
+}

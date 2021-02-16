@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: $base-font-size;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
